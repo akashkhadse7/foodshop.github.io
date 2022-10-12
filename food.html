@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr{
+            background-color:aqua;
+            color:white;
+            text-align: center;
+
+        }
+        .btn{
+          background-color: green;
+        }
+    </style>
+    <script src="src.js">
+    </script>
+</head>
+<body>
+    <div>
+        <font size="9">
+            <table width="800" border="2" cellspacing="4" cellpadding="1" align="center" id="orderform">
+                <tr>
+                    <td>
+                        <img src="shopii.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">customer details</td>
+                </tr>
+                <tr>
+                    <td>Customer Name</td>
+                    <td><input type="text" id="txtName" widht="200" equired></td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td><input type="text" id="txtMobile" required></td>  
+                </tr>
+
+                <tr>
+                    <td>select a meal</td>
+                </tr>
+                <tr>
+                    <td><img src="burger.jpg" width="600" height="500">
+                     <br>
+                     <input type="radio" name="meal" id="optburger" value="omgBurger">OMGburger(&#8377;150/-)
+                    </td>
+                 <td>
+                     <img src="roller.jpg" width="500" height="500">               
+                          <br>
+                    <input type="radio" name="meal" id="otpRoller" value="omgRoller">OMGRoller(&#8377;200/-)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        select Ad-on's
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="fries.jpg" height="250" width="250">
+                        <br>
+                        <input type="checkbox" id="optfires" value="largefries">largefries(&#8377;60/-)
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Place Order" class="btn" onclick=" placeorder()">
+                    </td>
+                </tr>
+
+            </table>
+            <br>
+            <dl id="ordersummary" style="display:none;">
+                <h2>order details</h2>
+                <dt>customer Name:</dt>
+                <dd id="lblName:"></dd>
+                <dt>Mobile Number:</dt>
+                <dd id="lblMobile"></dd>
+                <dt>Meal :</dt>
+                <dd id="lblmeal"></dd>
+                <dt>Ad-on's :</dt>
+                <dd id="lbladd"></dd>
+                <dt>Total bill amount :</dt>
+                <dd id="lblAmount"></dd>
+                <br>
+                <input type="button" value="print bill" onclick="window.print()">
+            </dl>
+    </div>
+</body>
+</html>
